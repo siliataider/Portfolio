@@ -3,10 +3,15 @@ html{
   margin: 0;
   padding: 0;
   background-attachment: scroll;
+  height: 100%;
+  overflow: auto;
+  cursor: url('../img/favicon-32x32.png'), auto;
 }
 
 body{
-  color: rgb(192, 187, 187)
+  color: rgb(192, 187, 187);
+  background-color: rgb(0, 0, 0);
+  transition: background 0.5s linear;
 }
 
 #scroll_to_top {
@@ -40,12 +45,6 @@ footer{
   padding: 1% 5%;
   text-align: center;
   border-radius: 5%;
-}
-
-html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #15202c 0%, #000000 100%);
-  overflow: hidden;
 }
 
 #stars {
@@ -100,25 +99,37 @@ html {
 }
 
 #title {
-  position: absolute;
-  top: 50%;
+  margin-top: 5%;
   left: 0;
   right: 0;
   color: #FFF;
   text-align: center;
-  font-family: "lato", sans-serif;
-  font-weight: 300;
+  font-family: Effra, Raleway, Calibri, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
   font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
+  letter-spacing: 5px;
   padding-left: 10px;
 }
+
 #title span {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-transition: .5s all;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
 }
 
+#title span:hover {
+  color: #dddbd8;
+  -moz-transition: 1s all;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+  letter-spacing: .2em;
+}
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -189,3 +200,8 @@ html {
   -o-transition: 1s opacity;
   transition: 1s opacity;
 }
+
+.theme_btn {
+  display: block;
+}
+

@@ -1,3 +1,20 @@
+const light = document.getElementById('light');
+const dark = document.getElementById('dark');
+
+
+light.addEventListener('click', function onClick(event) {
+//document.body.style.background = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 50%)";
+document.body.style.background = 'rgb(27, 28, 32)';
+// document.body.style.color = 'white';
+});
+
+dark.addEventListener('click', function onClick(event) {
+  document.body.style.background = 'black';
+  // document.body.style.color = 'white';
+});
+
+
+
 // Notre "Base de donnée". Les destinations puis les utilisateurs.
 let destinations = [
   { ville: "Tokyo", prix:"50", image: "img/Tokyo.jpg", video:" https://www.youtube.com/embed/-SL9KRvzVmo", description: "Tokyo, la plus grande mégalopole au monde,compte parmi les destinations uniques, où les voyageurs communienttant avec la technologie qu'avec la nature et les traditions ancestrales. Tokyo la magnétique, au pays du Soleil Levant, offre un cocktail de saveurs et de sensations, au goût implosif et singulier.", continent: "asie" },

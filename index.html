@@ -10,7 +10,8 @@
 <div id="scroll_to_top">
     <a href="#top"><img src="img/fleche.png"  alt="Retourner en haut" /></a>
 </div>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
 <!-- j aurais peut etre besoin dune api plus tard pour decrire my personal journey, mettre heure de chaque ville?-->
 <body onload="appelAPI()">
@@ -94,48 +95,14 @@
     -webkit-text-fill-color: transparent;
   }
 
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  (html) background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
   <div id='title'>
     <span id="about">Let me introduce myself</span >
   </div>
   <br><br>
-  <div id=''>
-    <span id="education">I studied...</span>
-  </div>
-  <br><br>
-  <div id=''>
-    <span id="certifications">On top of that</span>
-  </div>
-  <br><br>
-  <div id=''>
-    <span id="projects">Here are some of my projects</span>
-  </div>
-  <br><br>
-  <div id=''>
-    <span id="personal">What passionates me</span>
-  </div>
-  <br><br>
-  <div id=''>
-    <span id="contact">Happy to stay in touch!</span>
-  </div>-->
 
-
-  <div id='title'>
-    <span id="about">Hi, I'm Silia</span >
-  </div>
-  <br><br>
-  
-<footer>
-    Portfolio version 1.0 [13-10-2022]
-</footer>
-</body>
-
-<script src="js/script.js"></script>
-
-
-
-<template id="listesections">
+  <template id="listesections">
 
   <div class="class">
 
@@ -153,9 +120,50 @@
       <a href="Reservation.html?section={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
       <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
-    
+      </div>
     </div>
+  </template>
+  
+-->
+
+  <button class = 'theme_btn' id="light">Light</button>
+  <button class = 'theme_btn' id="dark">Dark</button>
+
+  <div id='title'>
+    <span id="about">Hi, I'm Silia</span >
   </div>
-</template> 
+  <br><br><br><br><br>
+  <div id='title'>
+    <span id="education">I studied...</span>
+  </div>
+  <br><br><br><br><br>
+  <div id='title'>
+    <span id="certifications">On top of that</span>
+  </div>
+  <br><br><br><br>
+  <div id='title'>
+    <span id="internships">I worked at...</span>
+  </div>
+  <br><br><br><br>
+  <div id='title'>
+    <span id="projects">Some of my projects</span>
+  </div>
+  <br><br><br><br>
+  <div id='title'>
+    <span id="personal">What passionates me</span>
+  </div>
+  <br><br><br><br>
+  <div id='title'>
+    <span id="contact">Happy to stay in touch!</span>
+  </div>
+  <br><br><br><br>
+
+  
+</body>
+
+<footer>
+      Portfolio version 1.0 [13-10-2022]
+  </footer>
+<script src="js/script.js"></script> 
 
 </html>
