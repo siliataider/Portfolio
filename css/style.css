@@ -5,7 +5,7 @@ html{
   background-attachment: scroll;
   height: 100%;
   overflow: auto;
-  cursor: url('../img/favicon-32x32.png'), auto;
+  cursor: url('../img/favicon-16x16.png'), auto;
 }
 
 body{
