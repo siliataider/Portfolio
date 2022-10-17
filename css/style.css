@@ -110,6 +110,7 @@ footer{
   font-size: 50px;
   letter-spacing: 5px;
   padding-left: 10px;
+  
 }
 
 #title span {
@@ -120,6 +121,13 @@ footer{
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
+}
+
+#title p {
+  margin-top: 0%;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 #title span:hover {
