@@ -16,77 +16,31 @@ dark.addEventListener('click', function onClick(event) {
 
 
 // Notre "Base de donnée". Les destinations puis les utilisateurs.
-let destinations = [
-  { ville: "Tokyo", prix:"50", image: "img/Tokyo.jpg", video:" https://www.youtube.com/embed/-SL9KRvzVmo", description: "Tokyo, la plus grande mégalopole au monde,compte parmi les destinations uniques, où les voyageurs communienttant avec la technologie qu'avec la nature et les traditions ancestrales. Tokyo la magnétique, au pays du Soleil Levant, offre un cocktail de saveurs et de sensations, au goût implosif et singulier.", continent: "asie" },
-  { ville: "Melbourne", prix:"30", image: "img/Melbourne.jpg", video:"https://www.youtube.com/embed/rGNdcEdOuMY", description: "La ville colorée et pleine de vie de Melbourne a dequoi plaire à tous les types de voyageurs, entre ses cafés confortables, son art local, l'histoire australienne et aborigène jusqu'aux divers sports auxquels assister. Commencez votre journée avec un « flat white » (sorte de café latte à base d'espresso) avant d'emprunter gratuitement le City Circle Tram pour découvrir des attractions singulières comme les jardins botaniques royaux et la réserve de Healesville où vous attendent de nombreux animaux.</", continent: "australie" },
-  { ville: "Venise", prix:"30" , image: "img/Venise.jpg",video:"https://www.youtube.com/embed/JphHw6iU4m8", description: "Venise est une ville enchanteresse qui envoute ses visiteurs par son charme incroyable. C'est un lieu de rêve et de romantisme où se mêlent le mystère et le drame. Et si le Carnaval n'a lieu qu'une fois par an, son ambiance est présente tout au long de l'année. Le Grand Canal est le centre de l'activité, les gondoliers chantant pour les passagers installés dans leurs petites embarcations.", continent: "europe" },
-  { ville: "Dubai", prix:"30", image: "img/Dubai.jpeg", description: "Le plus grand… Le plus haut… Le plus long… Les superlatifs finissent par manquer pour décrire les attractions de Dubaï, une ville qui se distingue par son design ultra-moderne dans un pays historiquement conservateur. Les gratte-ciel vertigineux, les îles en forme de palmiers et les plages dorées, la vie nocturne vibrante, le shopping de luxe et les restaurants de classe mondiale font de la ville un endroit à contempler et à explorer.", continent:"asie" },
-  { ville: "Hawaii",  prix:"30", image: "img/Hawaii.jpg", description: "À Hawaii les forces brutes de la nature semblent s'être conjuguées pour former le plus beau décor du monde. Les volcans, nés des profondeurs de l’océan, ont façonné les îles une à une, projetant encore aujourd’hui leur magma incandescent en fontaines ou en coulées rougeoyantes. Réplique de l’apparition de la vie sur terre.", continent: "amerique" },
-  { ville: "Florence", prix:"30", image: "img/Florence.jpg", description: "Florence fait battre le cœur des amateurs d'art. Si vous aimez particulièrement la période de la Renaissance, la Galleria dell'Accademia vous fera tourner la tête, avec notamment de nombreuses œuvres de Michel-Ange. Les fanas d'architecture pourront admirer l'antique Ponte Vecchio, tandis que les amateurs de lèche-vitrines pourront se régaler à courir les boutiques de la Piazza Santo Spirito pendant tout un après-midi.", continent: "europe" }
+let diplomas = [
+  { school: "CPE Lyon Engineering School", diploma:"Engineering Diploma (Masters)", image: "img/cpe.png", major: "Software Design and Big Data", description: "toto", modules: "toto"},
+  { school: "CPE Lyon Engineering School", diploma:"Bachelor's Degree", image: "img/cpe.png", major: "Electronics, Telecommunications and Computer Science", description: "toto", modules: "toto"},
+  { school: "Universite Claude Bernard Lyon 1", diploma:"Bachelor's Degree", image: "img/ucbl1.jpg", major: "Fundamental Physics", description: "toto", modules: "toto"}
 ];
-
-let baseDonnees = [
-  { user: "Tokyo", psw:"50"},
-  { user: "etienne", psw:"coucou"},
-  { user: "silia", psw:"kawai"},
-  { user: "gregory", psw:"morel"},
-  { user: "site", psw:"web"},
-  { user: "givors", psw:"mama"}
-];
-
-//Fonction Filtre des destinations. 
-filterSelection("all")
-  function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("filterDiv");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-      w3RemoveClass(x[i], "show");
-      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-  }  
-
-  function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-    }
-  }
-  
-  function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      while (arr1.indexOf(arr2[i]) > -1) {
-        arr1.splice(arr1.indexOf(arr2[i]), 1);     
-      }
-    }
-    element.className = arr1.join(" ");
-  }
 
 // Template
- let template = document.querySelector("#listeDestinations");
+ let template = document.querySelector("#schools");
 
-for (const d of destinations) {					
+for (const d of diplomas) {					
     let clone = document.importNode(template.content, true);     
 
     newContent = clone.firstElementChild.innerHTML	
-        .replace(/{{ville}}/g, d.ville)				
-        .replace(/{{image}}/g, d.image)
+        .replace(/{{school}}/g, d.school)				
+        .replace(/{{diploma}}/g, d.diploma)
+        .replace(/{{image}}/g, d.image)				
+        .replace(/{{major}}/g, d.major)
         .replace(/{{description}}/g, d.description)				
-        .replace(/{{continent}}/g, d.continent)
+        .replace(/{{modules}}/g, d.modules)
 
         clone.firstElementChild.innerHTML = newContent
-
-        clone.firstElementChild.setAttribute("class", "filterDiv " + d.continent);
      
-        clone.firstElementChild.firstElementChild.style.backgroundImage="url('"+d.image+"')",		
+        //clone.firstElementChild.firstElementChild.style.backgroundImage="url('"+d.image+"')",		
         
     document.body.appendChild(clone);
-    
     
 }
 

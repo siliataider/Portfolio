@@ -5,7 +5,7 @@ html{
   background-attachment: scroll;
   height: 100%;
   overflow: auto;
-  cursor: url('../img/favicon-16x16.png'), auto;
+  cursor: url('../img/cursor-16x16.png'), auto;
 }
 
 body{
@@ -107,9 +107,8 @@ footer{
   font-family: Effra, Raleway, Calibri, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 3.5vmax;
   letter-spacing: 5px;
-  padding-left: 10px;
   
 }
 
@@ -126,8 +125,11 @@ footer{
 #title p {
   margin-top: 0%;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.2vmax;
   letter-spacing: 2px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #title span:hover {
@@ -138,6 +140,22 @@ footer{
   transition: 1s all;
   letter-spacing: .2em;
 }
+
+.floating {
+  position: relative;
+  animation-name: floating;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0%   {left:0px; top:0px;}
+  25%  {left:20px; top:0px;}
+  50%  {left:0px; top:0px;}
+  75%  {left:-20px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -160,11 +178,12 @@ footer{
 }
 
 .navbar a {
+  padding-right: 1.3vmax;
   color: #807c7c;
   text-decoration: none;
   font-family: Effra, Raleway, Calibri, Helvetica, Arial, sans-serif;
   font-weight: 100;
-  font-size: 22px;
+  font-size: 1.3vmax;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #000;
   -moz-transition: .5s all;
@@ -212,4 +231,43 @@ footer{
 .theme_btn {
   display: block;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 5.0vmax;
+  margin-right:5.0vmax;
+}
+
+.grid-item {
+  background-color: rgb(20, 20, 20, 0.9);
+  border-radius: 10%;
+  margin-left:4.2vmax;
+  margin-right:4.2vmax;
+}
+
+.grid-item img{
+  padding: 5%;
+  width: 90%;
+  height: 40%;
+  border-radius:5%;
+}
+
+.inner {
+  font-family: Effra, Raleway, Calibri, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.2vmax;
+  font-size: small;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inner p {
+  -webkit-text-fill-color: grey;
+  padding-bottom: 20%;
+}
+
+
 

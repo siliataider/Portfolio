@@ -3,15 +3,14 @@
 
 <head>
 <title>Silia's Portfolio</title>
-
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="stylesheet" href="css/style.css"/>
-<link href='https://fonts.googleapis.com/css?family=Kite One' rel='stylesheet'>
-<div id="scroll_to_top">
-    <a href="#top"><img src="img/fleche.png"  alt="Retourner en haut" /></a>
-</div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Kite One' rel='stylesheet'>
+  <div id="scroll_to_top">
+      <a href="#top"><img src="img/fleche.png"  alt="Retourner en haut" /></a>
+  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 <!-- j aurais peut etre besoin dune api plus tard pour decrire my personal journey, mettre heure de chaque ville?-->
 <body onload="appelAPI()">
@@ -123,6 +122,28 @@
       </div>
     </div>
   </template>
+
+
+    <div class="grid-container">
+    <template id="schools">                
+      <div class="grid-item">
+          <img src={{image}}>
+          <div class="inner">
+              <h2>{{school}}</h2>
+              <h3>{{diploma}}</h3>
+              <h3>{{major}}</h3>
+              <p>
+                  {{description}}
+              </p>
+              <p>
+                {{modules}}
+              </p>
+          </div>
+      </div>               
+    </template>
+  </div>
+
+
   
 -->
 
@@ -132,44 +153,91 @@
   <div id='title'>
     <span id="about">Hi, I'm Silia</span >
     <br><br>
-    <p>💬 Second-year master's student at CPE Lyon Engineering school.</p>  
-    <p>🔭 Majoring in Software Design and Big Data at CPE Lyon Engineering school.</p> 
-    <p>⚡ Firmware Development Intern at Maxlinear Germany GmbH. </p>
+    <div class="floating">
+      <p>💬 Second-year master's student at CPE Lyon Engineering school.</p>  
+      <p>🔭 Majoring in Software Design and Big Data.</p> 
+      <p>⚡ Firmware Development Intern at Maxlinear Germany GmbH. </p>
+    </div>
   </div>
 
   <br><br><br><br><br>
 
   <div id='title'>
-    <span id="education">I studied...</span>
+    <span>I studied...</span>
+    <br><br>
   </div>
+
+  <div class="grid-container">
+      <div class="grid-item floating">
+          <img src="img/cpe-black.png">
+          <div class="inner">
+              <h2>CPE Lyon Engineering School</h2>
+              <h3>Engineering Diploma (Masters)</h3>
+              <h3>Software Design and Big Data</h3>
+              <p>toto</p>
+          </div>
+      </div>
+      <div class="grid-item floating">
+        <img src="img/cpe-black.png">
+        <div class="inner">
+            <h2>CPE Lyon Engineering School</h2>
+            <h3>Bachelor's Degree</h3>
+            <h3>Electronics, Telecommunications and Computer Science</h3>
+            <p>toto</p>
+        </div>
+    </div> 
+    <div class="grid-item floating">
+      <img src="img/ucbl1-black.png">
+      <div class="inner">
+          <h2>Universite Claude Bernard Lyon 1</h2>
+          <h3>Bachelor's Degree</h3>
+          <h3>Fundamental Physics</h3>
+          <p>toto</p>
+      </div>
+  </div>                
+  </div>
+  
+
+
   <br><br><br><br><br>
+  
   <div id='title'>
     <span id="certifications">On top of that</span>
   </div>
+
   <br><br><br><br>
+
   <div id='title'>
     <span id="internships">I worked at...</span>
   </div>
+
   <br><br><br><br>
+
   <div id='title'>
     <span id="projects">Some of my projects</span>
   </div>
+
   <br><br><br><br>
+
   <div id='title'>
     <span id="personal">What passionates me</span>
   </div>
+
   <br><br><br><br>
+
   <div id='title'>
     <span id="contact">Happy to stay in touch!</span>
   </div>
+
   <br><br><br><br>
 
-  
+  <script src="js/script.js"></script> 
+
 </body>
 
 <footer>
       Portfolio version 1.0 <br> [13-10-2022]
-  </footer>
-<script src="js/script.js"></script> 
+</footer>
+
 
 </html>
