@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-<title>Silia's Portfolio</title>
+  <title>Silia's Portfolio</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="stylesheet" href="css/style.css"/>
   <link href='https://fonts.googleapis.com/css?family=Kite One' rel='stylesheet'>
@@ -14,160 +14,164 @@
 
 <!-- j aurais peut etre besoin dune api plus tard pour decrire my personal journey, mettre heure de chaque ville?-->
 <body onload="appelAPI()">
+  <div id="page">
 
-  <div id='stars'></div>
-  <div id='stars2'></div>
-  <div id='stars3'></div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
 
-  <nav class="navbar">
-    <ul>
-        <li >
-            <a href="#about">About</a>
-        </li>
-        <li >
-            <a href="#education">Education</a>
-        </li>
-        <li >
-            <a href="#certifications">Certifications</a>
-        </li>
-        <li >
-          <a href="#projects">Projects & Skills</a>
-        </li>
-        <li >
-            <a href="#personal">Personal journey</a>
-        </li>
-        <li >
-            <a href="#contact">Contact</a>
-        </li>
-    </ul>
-</nav>
+    <nav class="navbar">
+      <ul>
+          <li >
+              <a title="about" href="#about">About</a>
+          </li>
+          <li >
+              <a title="education" href="#education">Education</a>
+          </li>
+          <li >
+              <a title="certifications" href="#certifications">Certifications</a>
+          </li>
+          <li >
+            <a title="projects" href="#projects">Projects & Skills</a>
+          </li>
+          <li >
+              <a title="personal" href="#personal">Personal journey</a>
+          </li>
+          <li >
+              <a title="contact" href="#contact">Contact</a>
+          </li>
+      </ul>
+    </nav>
 
 
-<!-- 
-  <div id="containerIntro">
-        <p>< h1 ></p><h1 id="about"> Let me introduce myself </h1><p>< / h1 ></p>
-  </div>
-  <br><br>
+  <!-- 
+    <div id="containerIntro">
+          <p>< h1 ></p><h1 id="about"> Let me introduce myself </h1><p>< / h1 ></p>
+    </div>
+    <br><br>
 
-  <div id="containerIntro">
-    <p>< h1 ></p><h1 id="education"> I studied... </h1><p>< / h1 ></p>
-  </div>
-  <br><br>
+    <div id="containerIntro">
+      <p>< h1 ></p><h1 id="education"> I studied... </h1><p>< / h1 ></p>
+    </div>
+    <br><br>
 
-  <div id="containerIntro">
-    <p>< h1 ></p><h1 id="certifications"> On top of that </h1><p>< / h1 ></p>
-  </div>
-  <br><br>
+    <div id="containerIntro">
+      <p>< h1 ></p><h1 id="certifications"> On top of that </h1><p>< / h1 ></p>
+    </div>
+    <br><br>
 
-  <div id="containerIntro">
-    <p>< h1 ></p><h1 id="projects"> Here are some of my projects </h1><p>< / h1 ></p>
-  </div>
-  <br><br>
+    <div id="containerIntro">
+      <p>< h1 ></p><h1 id="projects"> Here are some of my projects </h1><p>< / h1 ></p>
+    </div>
+    <br><br>
 
-  <div id="containerIntro">
-    <p>< h1 ></p><h1 id="personal"> What passionates me </h1><p>< / h1 ></p>
-  </div>
-  <br><br>
+    <div id="containerIntro">
+      <p>< h1 ></p><h1 id="personal"> What passionates me </h1><p>< / h1 ></p>
+    </div>
+    <br><br>
 
-  <div id="containerIntro">
-    <p>< h1 ></p><h1 id="contact"> Happy to stay in touch! </h1><p>< / h1 ></p>
-  </div>
-  <br><br> 
+    <div id="containerIntro">
+      <p>< h1 ></p><h1 id="contact"> Happy to stay in touch! </h1><p>< / h1 ></p>
+    </div>
+    <br><br> 
 
-  #title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    color: #FFF;
-    text-align: center;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 50px;
-    letter-spacing: 10px;
-    margin-top: -60px;
-    padding-left: 10px;
-  }
-  #title span {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    #title {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      color: #FFF;
+      text-align: center;
+      font-family: "lato", sans-serif;
+      font-weight: 300;
+      font-size: 50px;
+      letter-spacing: 10px;
+      margin-top: -60px;
+      padding-left: 10px;
+    }
+    #title span {
+      background: -webkit-linear-gradient(white, #38495a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-  (html) background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    (html) background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
-  <div id='title'>
-    <span id="about">Let me introduce myself</span >
-  </div>
-  <br><br>
+    <div id='title'>
+      <span id="about">Let me introduce myself</span >
+    </div>
+    <br><br>
 
-  <template id="listesections">
+    <template id="listesections">
 
-  <div class="class">
+    <div class="class">
 
-    <div  class="parallax1">
+      <div  class="parallax1">
 
-      <span class="titres">{{ville}}</span>
+        <span class="titres">{{ville}}</span>
 
-      <div class="descriptionContainer">
-      <span class="titreDescription"> Pourquoi {{ville}}?</span>
-      <br>
-      <br>
-      <span class="description"> {{description}}</span>
+        <div class="descriptionContainer">
+        <span class="titreDescription"> Pourquoi {{ville}}?</span>
+        <br>
+        <br>
+        <span class="description"> {{description}}</span>
 
+        </div>
+        <a href="Reservation.html?section={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+        <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+
+        </div>
       </div>
-      <a href="Reservation.html?section={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
-      <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
+    </template>
 
+
+      <div class="grid-container">
+      <template id="schools">                
+        <div class="grid-item">
+            <img src={{image}}>
+            <div class="inner">
+                <h2>{{school}}</h2>
+                <h3>{{diploma}}</h3>
+                <h3>{{major}}</h3>
+                <p>
+                    {{description}}
+                </p>
+                <p>
+                  {{modules}}
+                </p>
+            </div>
+        </div>               
+      </template>
+    </div>
+
+
+    
+  -->
+
+    <button class = 'theme_btn' id="light">Light</button>
+    <button class = 'theme_btn' id="dark">Dark</button>
+
+    <section class="about" id="about">
+    <div id='title'>
+      <span>Hi, I'm Silia</span >
+      <br><br>
+      <div class="floating">
+        <p>💬 Second-year master's student at CPE Lyon Engineering school.</p>  
+        <p>🔭 Majoring in Software Design and Big Data.</p> 
+        <p>⚡ Firmware Development Intern at Maxlinear Germany GmbH. </p>
       </div>
     </div>
-  </template>
+    </section>
 
+    <br><br><br><br><br>
+
+    <section class="education" id="education">
+    <div id='title'>
+      <span>I studied...</span>
+      <br><br>
+    </div>
 
     <div class="grid-container">
-    <template id="schools">                
-      <div class="grid-item">
-          <img src={{image}}>
-          <div class="inner">
-              <h2>{{school}}</h2>
-              <h3>{{diploma}}</h3>
-              <h3>{{major}}</h3>
-              <p>
-                  {{description}}
-              </p>
-              <p>
-                {{modules}}
-              </p>
-          </div>
-      </div>               
-    </template>
-  </div>
-
-
-  
--->
-
-  <button class = 'theme_btn' id="light">Light</button>
-  <button class = 'theme_btn' id="dark">Dark</button>
-
-  <div id='title'>
-    <span id="about">Hi, I'm Silia</span >
-    <br><br>
-    <div class="floating">
-      <p>💬 Second-year master's student at CPE Lyon Engineering school.</p>  
-      <p>🔭 Majoring in Software Design and Big Data.</p> 
-      <p>⚡ Firmware Development Intern at Maxlinear Germany GmbH. </p>
-    </div>
-  </div>
-
-  <br><br><br><br><br>
-
-  <div id='title'>
-    <span>I studied...</span>
-    <br><br>
-  </div>
-
-  <div class="grid-container">
       <div class="grid-item floating">
           <img src="img/cpe-black.png">
           <div class="inner">
@@ -185,54 +189,348 @@
             <h3>Electronics, Telecommunications and Computer Science</h3>
             <p>toto</p>
         </div>
-    </div> 
-    <div class="grid-item floating">
-      <img src="img/ucbl1-black.png">
-      <div class="inner">
-          <h2>Universite Claude Bernard Lyon 1</h2>
-          <h3>Bachelor's Degree</h3>
-          <h3>Fundamental Physics</h3>
-          <p>toto</p>
+      </div> 
+      <div class="grid-item floating">
+        <img src="img/ucbl1-black.png">
+        <div class="inner">
+            <h2>Universite Claude Bernard Lyon 1</h2>
+            <h3>Bachelor's Degree</h3>
+            <h3>Fundamental Physics</h3>
+            <p>toto</p>
+        </div>
+      </div>                
+    </div>
+    </section>
+
+
+    <br><br><br><br><br>
+    
+    <section class="certifications" id="certifications">
+    <div id='title'>
+      <span>On top of that</span>
+    </div>
+
+    <aside>
+      <div class="content">
+        <h3><a href="#">HarvardX CS50: Introduction to Computer Science</a></h3>
+        <p>description</p>
+        <ul>
+          <li>python</li>
+          <li>c/c++</li>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
       </div>
-  </div>                
-  </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1b_U_B8paWxHtK_wOkY6ImjKAMVxL8DIh/view?usp=sharing">Goldman Sachs: Engineering Virtual Program</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Complex problem solving</li>
+          <li>Cryptography</li>
+          <li>Password cracking</li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://www.linkedin.com/learning/certificates/e11622bcc822c8de3ee8413a9c031bf3a9a718570a87e03e8ea3be9fd0e0dc16">LinkedIn: Blockchain Basics</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Blockchain technology</li>
+          <li>Blockchain ecosystem</li>
+          <li>Blockchain obstacles and challenges</li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1B6mGkBPNryA-JbAsSmUOgr2U1l8FIw6G/view?usp=sharing">AIESEC: Leadership development experience</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Leadership</li>
+          <li>Project management</li>
+          <li>Public speaking</li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1afjk700LEp3DfmYg85SJS-k3mfaCrB3e/view?usp=sharing">BEELYS: Entrepreneurs pass</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Leadership </li>
+          <li>Management </li>
+          <li>Excel </li>
+          <li>Finance  </li>
+          <li>Marketing </li>
+          <li>Strategic planning </li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1C-6Js5nSnqDkrfqaKz3U2jkiWPRv9ZjH/view?usp=sharing">HarvardX: Lessons Learned from Incident Command System</a></h3>
+        <p>description</p>
+        <ul>
+          <li>crisis management</li>
+          <li>covid19 emergency plans</li>
+          <li>leadership</li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1MfkDgHUCbZks5TWlKW6i-leGxUBBUcmb/view?usp=sharing">Google Digital Garage: The Fundamentals of Digital Marketing</a></h3>
+        <p>description</p>
+        <ul>
+          <li>SEO/SEM</li>
+          <li>Web presence</li>
+          <li>Online business strategy</li>
+          <li>Advertisement</li>
+          <li>Data analytics</li>
+        </ul>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/14LKvwMpYt3OZe4ZOss73UxehNu9C4h8x/view?usp=sharing">AIESEC: CEO Training</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Leadership</li>
+          <li>Crisis Management</li>
+          <li>Team building</li>
+          <li>Complex problem solving</li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <aside>
+      <div class="content">
+        <h3><a target="_blank" href="https://drive.google.com/file/d/1O7NYYZLMUYQJ2ZpDph5tAMXNCgc4xts1/view?usp=sharing">GPS: Global peace ambassador</a></h3>
+        <p>description</p>
+        <ul>
+          <li>Leadership </li>
+          <li>Management </li>
+          <li>International relations </li>
+          <li>Projects coordination  </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    </section>
+
+    <br><br><br><br>
+
+    <section class="internships" id="internships">
+    <div id='title'>
+      <span>I worked at...</span>
+    </div>
+
+    <aside>
+      <div class="content">
+        <img alt="image of the maxlinear logo" src="img/maxlinear.png">
+        <h4>Firmware Developer Intern</h4>
+        <h5>MaxLinear</h5>
+        <h6>August 2022 - today</h6>
+        <p>description</p>
+        <a title="" href=""></a>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <img alt="image of the amazon logo" src="img/amazon.png">
+        <h4>Engineer Intern</h4>
+        <h5>Amazon Logistics</h5>
+        <h6>June 2021 - August 2021</h6>
+        <p>description</p>
+        <a title="" href=""></a>
+      </div>
+    </aside>
+
+    <blackquote>
+      <p class="quote">
+       Silia is someone who cares about the results of her efforts and how these results can have a positive impact on others.        
+      </p>
+      <p class="credit">
+        <strong>Pinto de Souza</strong><br>
+        <em> Flow Manager</em><br>
+        Amazon France
+      </p>
+    </blackquote>
+
+    <aside>
+      <div class="content">
+        <img alt="image of the aiesec logo" src="img/aiesec.png">
+        <h4>Local Committee President</h4>
+        <h5>AIESEC in Lyon</h5>
+        <h6>October 2019 - january 2021</h6>
+        <p>description</p>
+        <a title="" href=""></a>
+      </div>
+    </aside>
+
+    <aside>
+      <div class="content">
+        <img alt="image of the surfrider logo" src="img/surfrider.png">
+        <h4>Corporate Awareness Raising animator</h4>
+        <h5>Surfrider Foundation Europe</h5>
+        <h6>June 2022 - today</h6>
+        <p>description</p>
+        <a title="" href=""></a>
+      </div>
+    </aside>
+
+    <blackquote>
+      <p class="quote">
+        I know she’s eager to learn, to give her best and to grow through the new responsibilities she’ll be granted        
+       </p>
+       <p class="credit">
+        <strong>Sourour ELFOURTI</strong><br>
+        <em> Former Marketing Member</em><br>
+        AIESEC in Lyon
+       </p>
+    </blackquote>
+
+
+    </section>
+
+    <br><br><br><br>
+
+    <section class="projects" id="projects">
+
+    <div id='title'>
+      <span>Some of my projects</span>
+    </div>
+
+    <article>
+      <h2>BEELYS: Campus Creation - Business Creation Competition</h2>
+      <p> During this 10 months entrepreuneurship project I handled the "Link" project among 7 team members from 2 different schools where we had to elaborate an investor friendly Business Plan.
+        - Semi-finalists</p>
+        <ul>
+          <li>Leadership </li>
+          <li>Management </li>
+          <li>Excel </li>
+          <li>Finance  </li>
+          <li>Marketing </li>
+          <li>Strategic planning </li>
+        </ul>
+      <a class="btn" title="BEELYS Website" target="_blank" href="https://campuscreation.beelys.org/">Visit competition website</a>
+    </article>
+
+    <article>
+      <h2>Card market (Spring-Boot-Microservices-Junit-Mockito-Unit-Testing)</h2>
+      <p>This workshop was an approach to microservices on springboot. The project is a platform where users can sign up and then login to access a set of cards they own, they can then buy and sell cards from a market. We used different tools to ensure communication between our microservices and to run unit tests.</p>
+      <ul>
+        <li>microservices</li>
+        <li>restful application</li>
+        <li>mockito</li>
+        <li>junit</li>
+        <li>jacoco</li>
+        <li>springboot</li>
+      </ul>
+      <a class="btn" title="GitHub" target="_blank" href="https://github.com/siliataider/Spring-Boot-Microservices-Junit-Mockito-Unit-Testing-Atelier-III.git">Git repo</a>
+      <a class="btn" title="Youtube" target="_blank" href="https://www.youtube.com/watch?v=DVqqUt6DV7M">Youtube demo</a>
+    </article>
+
+    <article>
+      <h2>Fire Simulator</h2>
+      <p>This was a 4 days project aiming to deploy a RESTFUL compliant application with the Springboot framework (backend and frontend from scratch) able to connect to the teacher's API, get data related to fires in the region, place them on a map, get data related to the location of the fire engines, connect to the openstreetmap API to get directions, and move the engines towards the fires to reduce their intensity.</p>
+      <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+          <li>java</li>
+          <li>rest-api</li>
+          <li>json</li>
+          <li>crud</li>
+          <li>springboot</li>
+          <li>openstreetmap</li>
+      </ul>
+      <a class="btn" title="GitHub" target="_blank" href="https://github.com/siliataider/Fire-Simulator.git">Git repo</a>
+      <a class="btn" title="Youtube" target="_blank" href="https://youtu.be/yPQNRaNWkqw">Youtube demo</a>
+    </article>
+
+    <article>
+      <h2>Les Acupuncteurs Lyonnais</h2>
+      <p>This dynamic website (using smarty templating engine) accesses a database and shows a list of all the pathologies listed, that can expand into showing the symptoms; It uses another table in the same DB for login and signup to manage user infos.</p>
+      <ul>
+          <li>mysql</li>
+          <li>bootstrap</li>
+          <li>php</li>
+          <li>apache</li>
+          <li>smarty-template-engine</li>
+          <li>javascript</li>
+          <li>html</li>
+          <li>css</li>
+      </ul>
+      <a class="btn" title="GitHub" target="_blank" href="https://github.com/siliataider/Les-Acupuncteurs-Lyonnais.git">Git repo</a>
+    </article>
+
+    <article>
+      <h2>Travel Agency Website</h2>
+      <p>This project is about building a website for a travel agency with the parallax effect, technologies used are HTML, CSS and JavaScript.</p>
+      <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+          <li>api</li>
+          <li>filters</li>
+      </ul>
+      <a class="btn" title="GitHub" target="_blank" href="https://github.com/siliataider/Travel-Agency-Website.git">Git repo</a>
+      <a class="btn" title="website live" target="_blank" href="https://siliataider.github.io/Travel-Agency-Website/">Visit website</a>
+    </article>
+    <article>
+      <h2>Clone Castle website</h2>
+      <p>This project was a 1 hour test for the ability to clone a simple existing website featuring a castle in France. Coding in html, css, js, json</p>
+      <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>json</li>
+        <li>clone</li>
+      </ul>
+      <a class="btn" title="GitHub" target="_blank" href="https://github.com/siliataider/Castle-website.git">Git repo</a>
+      <a class="btn" title="website live" target="_blank" href="https://siliataider.github.io/Castle-website/">Visit website</a>
+    </article>
+
+
+    </section>
+
+    <br><br><br><br>
+
+    <section class="personal" id="personal">
+    <div id='title'>
+      <span>What passionates me</span>
+    </div>
+    </section>
+
+    <br><br><br><br>
+
+    <section class="contact" id="contact">
+    <div id='title'>
+      <span>Happy to stay in touch!</span>
+    </div>
+    </section>
+
+    <br><br><br><br>
+
   
-
-
-  <br><br><br><br><br>
-  
-  <div id='title'>
-    <span id="certifications">On top of that</span>
   </div>
 
-  <br><br><br><br>
-
-  <div id='title'>
-    <span id="internships">I worked at...</span>
-  </div>
-
-  <br><br><br><br>
-
-  <div id='title'>
-    <span id="projects">Some of my projects</span>
-  </div>
-
-  <br><br><br><br>
-
-  <div id='title'>
-    <span id="personal">What passionates me</span>
-  </div>
-
-  <br><br><br><br>
-
-  <div id='title'>
-    <span id="contact">Happy to stay in touch!</span>
-  </div>
-
-  <br><br><br><br>
-
-  <script src="js/script.js"></script> 
-
+  <script src="js/script.js"></script>
 </body>
 
 <footer>
