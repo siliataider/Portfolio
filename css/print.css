@@ -1,0 +1,69 @@
+@page { margin: .5cm;}
+
+body{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#scroll_to_top img{
+    display: none;
+}
+
+h1,h2,h3,h4,h5{margin: 0; font-family: "Open Sans", sans-serif}
+
+h1{font-size: 1.4em;}
+h1{font-size: 1.3em;}
+h1{font-size: 1.2em;}
+h1{font-size: 1.1em;}
+h1{font-size: 1em;}
+#title span{font-size: 2em;}
+#title span{margin-bottom: 10%; padding-bottom: 100px;}
+
+p{margin: 0 0 1em 0; font-size: .9em;}
+
+a, a:visited{ color: inherit; text-decoration: none;}
+
+a::after, a:visited::after{
+    content: ' (' attr(href) ')';
+    font-style: italic;
+    word-wrap: break-word;
+}
+
+nav{display: none;}
+
+section { margin-bottom: 50px;}
+
+section::after {content: ''; display: block; clear: both;}
+
+section.education, section.internships {margin-top: 20px; margin-bottom: 30px;}
+
+section.education aside, section.internships aside{ width: 33%; float: left; text-align: center;}
+
+.certifications-grid {
+    display: grid;
+  }
+
+section.internships aside{ width: 25%;}
+
+section.education aside div.content, section.internships aside div.content {margin: 15px;}
+
+section.projects {position: relative; margin-bottom: 40px; padding-top: 50px; border-top: 1px solid #ccc;}
+section.projects article { top: 40px; left: 425px}
+
+footer{
+    border-top: 1px sold #ccc;
+    position: relative;
+    min-height: 200px;
+    padding: 20px 0 0 170px;
+}
+
+footer::after{
+    content: url(../img/qr_code.png);
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}

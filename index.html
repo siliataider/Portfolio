@@ -4,7 +4,8 @@
 <head>
   <title>Silia's Portfolio</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="css/print.css"/>
   <link href='https://fonts.googleapis.com/css?family=Kite One' rel='stylesheet'>
   <div id="scroll_to_top">
       <a href="#top"><img src="img/fleche.png"  alt="Retourner en haut" /></a>
@@ -14,11 +15,7 @@
 
 <!-- j aurais peut etre besoin dune api plus tard pour decrire my personal journey, mettre heure de chaque ville?-->
 <body onload="appelAPI()">
-  <div id="page">
-
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
+  <div id="page">  
 
     <nav class="navbar">
       <ul>
@@ -43,6 +40,9 @@
       </ul>
     </nav>
 
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
 
   <!-- 
     <div id="containerIntro">
@@ -265,7 +265,7 @@
           <ul style="list-style: none;">
             <li>Blockchain technology</li>
             <li>Blockchain ecosystem</li>
-            <li>Blockchain obstacles and challenges</li>
+            <li>Blockchain challenges</li>
           </ul>
         </div>
       </aside>
@@ -373,7 +373,7 @@
     <aside>
       <div class="content">
         <img alt="image of the aiesec logo" src="img/cpe.png">
-        <h4>Local Committee President</h4>
+        <h4>Local Committee President </h4>
         <h5>AIESEC in Lyon</h5>
         <h6>October 2019 - january 2021</h6>
         <p>description</p>
