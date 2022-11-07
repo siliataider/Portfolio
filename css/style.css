@@ -564,7 +564,7 @@ section.internships blockquote p.credit::before{
   p{ font-size: .5em;}
   li{font-size: .4em;}
   #title p{font-size: .4em;}
-  .certifications-grid {grid-template-columns: repeat(2, 1fr);}
+  .certifications-grid {grid-template-columns: repeat(2, 1fr); font-size: .8em;}
 }
 
 @media screen and (max-width: 650px){
@@ -577,6 +577,6 @@ section.internships blockquote p.credit::before{
   section.internships aside div.content p{ font-size: .9em;}
   section.internships aside div.content img{display: inline-block; width: 125px; position: absolute; top: 30px; left: 0px;}
   section.projects article {padding: 160px 20px 0px 0px; background-size: 300px auto; min-height: initial;}
-  .certifications-grid {grid-template-columns: repeat(1, 1fr);}
+  .certifications-grid {grid-template-columns: repeat(1, 1fr); font-size: 1.2em;}
 }
 
