@@ -516,11 +516,19 @@ section.internships blockquote p.credit::before{
 
 /* Media queries */
 @media screen and (min-width: 2000px) {
-  body {
+  #page {
     margin-left: 20%;
     margin-right: 20%;
   }
 }
+
+@media screen and (min-width: 1500px) {
+  #page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
 
 @media screen and (max-width: 1500px){
   h1, #title{ font-size: 2.4em;}
