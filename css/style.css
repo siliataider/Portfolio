@@ -363,11 +363,11 @@ section.education .content{
 }
 
 section.education .content.cpe{
-  background-image: url('../img/cpe-black.png');
+  background-image: url('../img/cpe.png');
 }
 
 section.education .content.ucbl1{
-  background-image: url('../img/ucbl1-black.png');
+  background-image: url('../img/ucbl1.png');
 }
 
 .certifications-grid {
@@ -588,3 +588,95 @@ section.internships blockquote p.credit::before{
   .certifications-grid {grid-template-columns: repeat(1, 1fr); font-size: 1.2em;}
 }
 
+.nav-buttons-container .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-buttons-container {
+  display: flex;
+  position: relative;
+  margin-top: 24px;
+}
+
+.nav-buttons-container .previous-button,
+.nav-buttons-container .next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Roboto", sans-serif;
+  background: #023047;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 24px;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+.nav-buttons-container .next-button {
+  position: absolute;
+  right: 0;
+}
+
+.nav-buttons-container .previous-button:hover .icon {
+  animation: nav-prev-anim 300ms alternate infinite;
+}
+
+.nav-buttons-container .next-button:hover .icon {
+  animation: nav-next-anim 300ms alternate infinite;
+}
+
+@keyframes nav-prev-anim {
+  to {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes nav-next-anim {
+  to {
+    transform: translateX(-4px);
+  }
+}
+
+
+.slider{
+	margin:50px auto;
+	width:50%;
+}
+ 
+.img-box img{
+	width:100%;
+}
+
+.btn{
+	border:none;
+	outline:none;
+	background:#888;
+	padding:10px 30px;
+	font-size: 20px;
+	color:#ddd;
+	cursor: pointer;
+	margin:10px auto;			 
+}
+
+.btn:hover{
+	background: #111;
+}
+
+
+.contenu {
+  display: none;
+}
+button {
+  margin-top: 30px;
+}
+.back {
+  display: none;
+}
+.next {
+  margin-left: 50px;
+}
+.end {
+  display: none;
+}

@@ -1,5 +1,5 @@
-const light = document.getElementById('light');
-const dark = document.getElementById('dark');
+/*const light = document.getElementById('light');
+//const dark = document.getElementById('dark');
 
 
 light.addEventListener('click', function onClick(event) {
@@ -13,7 +13,7 @@ dark.addEventListener('click', function onClick(event) {
   // document.body.style.color = 'white';
 });
 
-
+*/
 
 // Notre "Base de donnée". Les destinations puis les utilisateurs.
 let diplomas = [
@@ -25,6 +25,7 @@ let diplomas = [
 // Template
  let template = document.querySelector("#schools");
 
+ /*
 for (const d of diplomas) {					
     let clone = document.importNode(template.content, true);     
 
@@ -43,6 +44,7 @@ for (const d of diplomas) {
     document.body.appendChild(clone);
     
 }
+*/
 
 //Fonction qui affiche le nom de la ville que la personne veut réserver.
 function reservez() {
@@ -210,3 +212,69 @@ function recap() {
   function cliqueImage(city){
     document.location.href="Reservation.html?destination=" + city; 
   }
+
+
+var images = ['cpe.png', 'ucbl1.png', 'cpe.png'];
+var h2 = ['BEELYS: Campus Creation - Business Creation Competition', 'Card market (Spring-Boot-Microservices-Junit-Mockito-Unit-Testing)', 'Fire Simulator', 'Les Acupuncteurs Lyonnais', 'Travel Agency Website', 'Clone Castle website'];
+var i = 0;
+
+function prev(){
+	if(i <= 0) i = 3;	
+	i--;
+	return setImg();			 
+}
+
+function next(){
+	if(i >= 3-1) i = -1;
+	i++;
+	return setImg();			 
+}
+
+function setImg(a){
+  if(a==0) { //previous
+    if(i <= 0) i = 3;	
+	  i--;
+  }
+  else if(a==1){ //next
+    if(i >= 3-1) i = -1;
+	  i++;
+  }
+
+  const el = document.getElementById('project-article');
+  return el.setAttribute('h2', h2[i]);
+	
+}
+
+
+$('body').on('click', '.next', function() { 
+  var id = $('.contenu:visible').data('id');
+  var nextId = $('.contenu:visible').data('id')+1;
+  $('[data-id="'+id+'"]').hide();
+  $('[data-id="'+nextId+'"]').show();
+
+  if($('.back:hidden').length == 1){
+      $('.back').show();
+  }
+
+  if(nextId == 7){
+      $('.contenu-holder').hide();
+      $('.end').show();
+  }
+});
+
+$('body').on('click', '.back', function() { 
+  var id = $('.contenu:visible').data('id');
+  var prevId = $('.contenu:visible').data('id')-1;
+  $('[data-id="'+id+'"]').hide();
+  $('[data-id="'+prevId+'"]').show();
+
+  if(prevId == 1){
+      $('.back').hide();
+  }    
+});
+
+$('body').on('click', '.edit-previous', function() { 
+  $('.end').hide();
+  $('.contenu-holder').show();
+  $('#contenu-6').show();
+});
